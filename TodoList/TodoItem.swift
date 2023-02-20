@@ -1,27 +1,26 @@
 //
-//  Task.swift
 //  TodoList
 //
-//  Created by Abdullah Addow on 1/18/23.
+//  Created by Abdullah Addow on 2/18/23.
 //  Copyright © 2023 Abdullah Addow. All rights reserved.
 //
 
 import Foundation
 import SwiftUI
 
-struct TaskItem: View {
-    @EnvironmentObject var tasksStore: TasksStore
-    var task: Task
+struct TodoItem: View {
+    @EnvironmentObject var todosStore: TodosStore
+    var todo: Todo
     
     
     
     var body: some View {
         return HStack {
-            Button(action: { self.tasksStore.toggleStatus(task)}) {
-                Text(self.task.title)
+            Button(action: { self.todosStore.toggleStatus(todo)}) {
+                Text(self.todo.title)
             }.buttonStyle(.borderless)
             Spacer()
-            if task.isDone {
+            if todo.isDone {
                 Image(systemName: "checkmark").foregroundColor(.green)
             }
         }

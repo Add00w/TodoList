@@ -2,14 +2,14 @@
 //  ContentView.swift
 //  TodoList
 //
-//  Created by Abdullah Addow on 1/18/23.
+//  Created by Abdullah Addow on 2/18/23.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TasksView().environmentObject(TasksStore())
+        TasksView().environmentObject(TodosStore())
     }
 }
 
